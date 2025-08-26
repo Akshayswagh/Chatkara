@@ -1,9 +1,9 @@
-/********** Template CSS **********/
 :root {
-    --primary: #FEA116;
+    --primary: #DC3545; /* red */
     --light: #F1F8FF;
     --dark: #0F172B;
 }
+
 
 .ff-secondary {
     font-family:cursive;

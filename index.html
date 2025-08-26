@@ -41,6 +41,38 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+<style>
+  /* Make nav items responsive */
+  .custom-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* spacing between items */
+    padding: 0;
+    list-style: none;
+  }
+
+  .custom-nav .nav-item {
+    flex: 1 1 calc(25% - 15px); /* 4 per row by default */
+    max-width: calc(25% - 15px);
+  }
+
+  /* Tablet - 2 per row */
+  @media (max-width: 991px) {
+    .custom-nav .nav-item {
+      flex: 1 1 calc(50% - 15px);
+      max-width: calc(50% - 15px);
+    }
+  }
+
+  /* Mobile - 1 per row */
+  @media (max-width: 576px) {
+    .custom-nav .nav-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+</style>
   </head>
 
   <body>
@@ -276,49 +308,122 @@
             <h1 class="mb-5">Most Popular Items</h1>
           </div>
           <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-            <ul
-              class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5"
-            >
-              <li class="nav-item">
-                <a
-                  class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active"
-                  data-bs-toggle="pill"
-                  href="#tab-1"
-                >
-                  <i class="fa fa-coffee fa-2x text-primary"></i>
-                  <div class="ps-3">
-                    <small class="text-body">Popular</small>
-                    <h6 class="mt-n1 mb-0">Breakfast</h6>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="d-flex align-items-center text-start mx-3 pb-3"
-                  data-bs-toggle="pill"
-                  href="#tab-2"
-                >
-                  <i class="fa fa-hamburger fa-2x text-primary"></i>
-                  <div class="ps-3">
-                    <small class="text-body">Special</small>
-                    <h6 class="mt-n1 mb-0">Shake</h6>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="d-flex align-items-center text-start mx-3 me-0 pb-3"
-                  data-bs-toggle="pill"
-                  href="#tab-3"
-                >
-                  <i class="fa fa-utensils fa-2x text-primary"></i>
-                  <div class="ps-3">
-                    <small class="text-body">Lovely</small>
-                    <h6 class="mt-n1 mb-0">drink</h6>
-                  </div>
-                </a>
-              </li>
-            </ul>
+<ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5 custom-nav">
+
+  <!-- Added Menus -->
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-1">
+      <i class="fa fa-mug-hot fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Morning</small>
+        <h6 class="mt-n1 mb-0">Pahatecha Raja</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+      <i class="fa fa-cloud-rain fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Rainy</small>
+        <h6 class="mt-n1 mb-0">Pavsatli Mja</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-3">
+      <i class="fa fa-pepper-hot fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Spicy</small>
+        <h6 class="mt-n1 mb-0">Zanzanit Zon</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-4">
+      <i class="fa fa-bread-slice fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Fresh</small>
+        <h6 class="mt-n1 mb-0">Bread Ki Bat</h6>
+      </div>
+    </a>
+  </li>
+
+  <!-- Your Existing Menus -->
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-5">
+      <i class="fa fa-heart fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Love</small>
+        <h6 class="mt-n1 mb-0">Talalel Prem</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-6">
+      <i class="fa fa-lemon fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Fasting</small>
+        <h6 class="mt-n1 mb-0">Upvas PN Zakas</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-7">
+      <i class="fa fa-fire fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Hot</small>
+        <h6 class="mt-n1 mb-0">Tava Garam Prem Garam</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-8">
+      <i class="fa fa-stopwatch fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Quick</small>
+        <h6 class="mt-n1 mb-0">2 Minute Zatka</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-9">
+      <i class="fa fa-pepper-hot fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Mix</small>
+        <h6 class="mt-n1 mb-0">Thod God Thod Tikht</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-10">
+      <i class="fa fa-glass-whiskey fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Grilled</small>
+        <h6 class="mt-n1 mb-0">Shek Zale Ka</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-11">
+      <i class="fa fa-question fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Choice</small>
+        <h6 class="mt-n1 mb-0">Pyaych Ka</h6>
+      </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-12">
+      <i class="fa fa-plus fa-2x text-primary"></i>
+      <div class="ps-3">
+        <small class="text-body">Extra</small>
+        <h6 class="mt-n1 mb-0">Thod Jastch Havay</h6>
+      </div>
+    </a>
+  </li>
+</ul>
+
+
             <div class="tab-content">
               <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
@@ -398,6 +503,12 @@
                       </div>
                     </div>
                   </div>
+                 
+                </div>
+              </div>
+
+              <div id="tab-2" class="tab-pane fade show p-0">
+                <div class="row g-4">
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
@@ -512,7 +623,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  
+                </div>
+              </div>
+
+              <div id="tab-3" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                 <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
@@ -626,7 +743,15 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                 
+                 
+                </div>
+              </div>
+
+
+              <div id="tab-4" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                 <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
@@ -702,7 +827,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  
+                </div>
+              </div>
+
+
+              <div id="tab-5" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                 <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
@@ -816,7 +948,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  
+                </div>
+              </div>
+
+
+              <div id="tab-6" class="tab-pane fade show p-0">
+                <div class="row g-4">
+               <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
@@ -873,6 +1012,13 @@
                       </div>
                     </div>
                   </div>
+                  
+                </div>
+              </div>
+
+
+              <div id="tab-7" class="tab-pane fade show p-0">
+                <div class="row g-4">
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
@@ -987,7 +1133,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                 
+                </div>
+              </div>
+
+
+              <div id="tab-8" class="tab-pane fade show p-0">
+                <div class="row g-4">
+               <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
@@ -1048,7 +1201,7 @@
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH8FQHpnFL7c-BofauUrRkGpMq3AqQbO6CYQ&s"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfhOv_A8DzfnVuutzx_ee4Tfhqq4jHuo-yEg&s"
                         alt=""
                         style="width: 80px"
                       />
@@ -1063,11 +1216,17 @@
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+
+
+              <div id="tab-9" class="tab-pane fade show p-0">
+                <div class="row g-4">
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsNW04JeoZXMAhyoFBBzfGDt_V8_ZmB9HPQw&s"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRoKrdM-nPx-ZITsyscSw8I8i8dUpFBinp9Q&s"
                         alt=""
                         style="width: 80px"
                       />
@@ -1075,18 +1234,19 @@
                         <h5
                           class="d-flex justify-content-between border-bottom pb-2"
                         >
-                          <span>PAPDI CHAT</span>
+                          <span>PAPADI CHAT</span>
                           <span class="text-primary">Rs 80</span>
                         </h5>
                         <small class="fst-italic"></small>
                       </div>
                     </div>
                   </div>
+
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
-                        src="https://i.pinimg.com/736x/94/25/f6/9425f675fc39fe42ca268e242a237f3f.jpg"
+                        src="https://thumbs.dreamstime.com/b/indian-tea-time-snacks-chole-chaat-made-boiled-chickpea-curry-samosa-curd-mint-chutney-tamarind-chutney-indian-snacks-chole-109155914.jpg"
                         alt=""
                         style="width: 80px"
                       />
@@ -1094,7 +1254,7 @@
                         <h5
                           class="d-flex justify-content-between border-bottom pb-2"
                         >
-                          <span>SAMOSA CHAT</span>
+                          <span>SAMOSA CHAT </span>
                           <span class="text-primary">Rs 60</span>
                         </h5>
                         <small class="fst-italic"></small>
@@ -1105,26 +1265,7 @@
                     <div class="d-flex align-items-center">
                       <img
                         class="flex-shrink-0 img-fluid rounded"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6LoyhqXyqFkfmPSSY8D8gVp1dYPK_d-vJNQ&s"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>TIKKI CHAT</span>
-                          <span class="text-primary">Rs 60</span>
-                        </h5>
-                        <small class="fst-italic"></small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWKB9K08UD5uWvOVn0yHwxbNuxmxQl1F1Nw&s"
+                        src="https://www.shutterstock.com/image-photo/sweet-corn-chat-steamed-yellow-600nw-1997560850.jpg"
                         alt=""
                         style="width: 80px"
                       />
@@ -1139,10 +1280,30 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="https://maharajaroyaldining.com/wp-content/uploads/2024/03/Aloo-Tikki-4.webp"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span> TIKKI CHAT</span>
+                          <span class="text-primary">Rs 60</span>
+                        </h5>
+                        <small class="fst-italic"></small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div id="tab-2" class="tab-pane fade show p-0">
+
+
+              <div id="tab-10" class="tab-pane fade show p-0">
                 <div class="row g-4">
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center">
@@ -1223,7 +1384,15 @@
                   </div>
                 </div>
               </div>
-              <div id="tab-3" class="tab-pane fade show p-0">
+
+
+             
+
+
+
+
+
+              <div id="tab-11" class="tab-pane fade show p-0">
                 <div class="row g-4">
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center">
@@ -1379,6 +1548,70 @@
                   </div>
                 </div>
               </div>
+               <div id="tab-12" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                 
+
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS800XfGrkOu76wdGd12jy_pYHOPh86XFOPiA&s"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>PAV 2PC</span>
+                          <span class="text-primary">Rs 10</span>
+                        </h5>
+                        <small class="fst-italic"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOl5xHfNfKYxKDgBV0ycJX0lGN4yLFWhDOqw&s"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>CHEESE</span>
+                          <span class="text-primary">Rs 20</span>
+                        </h5>
+                        <small class="fst-italic"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="https://png.pngtree.com/png-clipart/20240115/ourmid/pngtree-kheema-pav-spicy-png-image_11436297.png"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span> BUTTER PAV 2PC </span>
+                          <span class="text-primary">Rs 15</span>
+                        </h5>
+                        <small class="fst-italic"></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

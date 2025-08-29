@@ -2542,24 +2542,27 @@ fieldset:disabled .btn {
   opacity: 0.65;
 }
 .btn-primary {
-  color: #000;
-  background-color: #bc3333;
-  border-color: #c70000;
+  color: #fff;
+  background: linear-gradient(45deg, #c23616, #ff5722); /* reddish-orange gradient */
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(194, 54, 22, 0.4); /* subtle glow */
 }
-.btn-primary:hover {
-  color: #000;
-     background-color: #ff4545;
-    border-color: #e95959;
 
+.btn-primary:hover {
+  background: linear-gradient(45deg, #ff3d3d, #ff7043); /* brighter gradient */
+  box-shadow: 0 6px 15px rgba(194, 54, 22, 0.6); /* stronger glow */
+  transform: translateY(-2px); /* lift effect */
 }
+
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
-  color: #000;
-    background-color: #ff4545;
-    border-color: #e95959;
-
-  box-shadow: 0 0 0 0.25rem rgba(216, 137, 19, 0.5);
+  background: linear-gradient(45deg, #ff3d3d, #ff7043);
+  box-shadow: 0 0 0 0.25rem rgba(255, 87, 34, 0.5); /* orange-red focus ring */
+  outline: none;
 }
+
 .btn-check:checked + .btn-primary,
 .btn-check:active + .btn-primary,
 .btn-primary:active,

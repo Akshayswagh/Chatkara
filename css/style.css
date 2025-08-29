@@ -145,9 +145,10 @@
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: var(--dark) !important;
-    }
-}
+        /* background: var(--dark) !important; */
+    background: rgba(194, 54, 22)!important;
+}}
+
 
 
 /*** Hero Header ***/

@@ -348,7 +348,8 @@
               class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5 custom-nav"
             >
               <!-- Added Menus -->
-              <li class="nav-item">
+             
+               <li class="nav-item">
                 <a
                   class="d-flex align-items-center text-start mx-3 pb-3"
                   data-bs-toggle="pill"
@@ -361,6 +362,7 @@
                   </div>
                 </a>
               </li>
+            
               <li class="nav-item">
                 <a
                   class="d-flex align-items-center text-start mx-3 pb-3"
@@ -509,7 +511,7 @@
             </ul>
 
             <div class="tab-content">
-              <div id="tab-1" class="tab-pane fade show p-0 active">
+              <div id="tab-1"  class="tab-pane fade show p-0 active">
                 <div class="row g-4">
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center">
@@ -1984,5 +1986,24 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('[data-bs-toggle="pill"]');
+    navLinks.forEach(link => {
+      link.addEventListener("shown.bs.tab", function (e) {
+        const targetId = e.target.getAttribute("href"); // Example: #tab-1
+        const targetEl = document.querySelector(targetId);
+
+        if (targetEl) {
+          targetEl.scrollIntoView({
+            behavior: "smooth", // smooth scrolling
+            block: "start"      // scroll to top of section
+          });
+        }
+      });
+    });
+  });
+</script>
+
   </body>
 </html>
